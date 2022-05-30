@@ -13,7 +13,21 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: [true, 'Please provide your password'],
-    select: false
+    select: false,
+    minlength: 8,
+  },
+  photo: {
+    type: String,
+  },
+  name: {
+    type: String,
+  },
+  bio: {
+    type: String,
+  },
+  phone: {
+    type: Number,
+    min: 10,
   },
 });
 
